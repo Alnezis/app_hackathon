@@ -25,10 +25,7 @@ class LoadingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-        child: SpinKitFadingCube(
-            color: kAccentColor,
-            size: 50.0
-        )
+        child: Text("Profile"),
     );
   }
 }
