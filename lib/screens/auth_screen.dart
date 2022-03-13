@@ -26,509 +26,132 @@ class _AuthScreenState extends State<AuthScreen> with InputValidationMixin {
   @override
   Widget build(BuildContext context) {
     final MapNotifier model = context.read<MapNotifier>();
-    return Dialog(
-      child: Container(
-          width: 382,
-          height: 300,
-
-          child: Stack(
-              children: <Widget>[
-                Positioned(
-                    top: 0,
-                    left: 0,
-                    child: Container(
-                        width: 382,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          borderRadius : BorderRadius.only(
-                            topLeft: Radius.circular(28),
-                            topRight: Radius.circular(28),
-                            bottomLeft: Radius.circular(28),
-                            bottomRight: Radius.circular(28),
-                          ),
-                          color : Color.fromRGBO(255, 255, 255, 1),
-                        )
-                    )
-                ),Positioned(
-                    top: 33,
-                    left: 35,
-                    child: Container(
-                        width: 312,
-                        height: 234,
-
-                        child: Stack(
-                            children: <Widget>[
-                              Positioned(
-                                  top: 0,
-                                  left: 0,
-                                  child: Container(
-                                      width: 295,
-                                      height: 189,
-
-                                      child: Stack(
-                                          children: <Widget>[
-                                            Positioned(
-                                                top: 0,
-                                                left: 0,
-                                                child: Container(
-                                                    width: 81,
-                                                    height: 86,
-
-                                                    child: Stack(
-                                                        children: <Widget>[
-                                                          Positioned(
-                                                              top: 0,
-                                                              left: 0,
-                                                              child: Container(
-                                                                  width: 81,
-                                                                  height: 86,
-                                                                  decoration: BoxDecoration(
-                                                                    borderRadius : BorderRadius.only(
-                                                                      topLeft: Radius.circular(11),
-                                                                      topRight: Radius.circular(11),
-                                                                      bottomLeft: Radius.circular(11),
-                                                                      bottomRight: Radius.circular(11),
-                                                                    ),
-                                                                    color : Color.fromRGBO(59, 56, 56, 1),
-                                                                  )
-                                                              )
-                                                          ),Positioned(
-                                                              top: 9,
-                                                              left: 11,
-                                                              child: Container(
-                                                                  width: 59,
-                                                                  height: 63,
-
-                                                                  child: Stack(
-                                                                      children: <Widget>[
-                                                                        Positioned(
-                                                                            top: 0,
-                                                                            left: 10,
-                                                                            child: Container(
-                                                                                width: 40,
-                                                                                height: 40,
-                                                                                decoration: BoxDecoration(
-                                                                                  borderRadius : BorderRadius.only(
-                                                                                    topLeft: Radius.circular(50),
-                                                                                    topRight: Radius.circular(50),
-                                                                                    bottomLeft: Radius.circular(50),
-                                                                                    bottomRight: Radius.circular(50),
-                                                                                  ),
-                                                                                  color : Color.fromRGBO(22, 224, 30, 1),
-                                                                                )
-                                                                            )
-                                                                        ),Positioned(
-                                                                            top: 50,
-                                                                            left: 0,
-                                                                            child: Text('Органика', textAlign: TextAlign.left, style: TextStyle(
-                                                                                color: Color.fromRGBO(255, 255, 255, 1),
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 11,
-                                                                                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                                                fontWeight: FontWeight.normal,
-                                                                                height: 1
-                                                                            ),)
-                                                                        ),
-                                                                      ]
-                                                                  )
-                                                              )
-                                                          ),
-                                                        ]
-                                                    )
-                                                )
-                                            ),Positioned(
-                                                top: 0,
-                                                left: 107,
-                                                child: Container(
-                                                    width: 81,
-                                                    height: 86,
-
-                                                    child: Stack(
-                                                        children: <Widget>[
-                                                          Positioned(
-                                                              top: 0,
-                                                              left: 0,
-                                                              child: Container(
-                                                                  width: 81,
-                                                                  height: 86,
-                                                                  decoration: BoxDecoration(
-                                                                    borderRadius : BorderRadius.only(
-                                                                      topLeft: Radius.circular(11),
-                                                                      topRight: Radius.circular(11),
-                                                                      bottomLeft: Radius.circular(11),
-                                                                      bottomRight: Radius.circular(11),
-                                                                    ),
-                                                                    color : Color.fromRGBO(59, 56, 56, 1),
-                                                                  )
-                                                              )
-                                                          ),Positioned(
-                                                              top: 9,
-                                                              left: 4,
-                                                              child: Container(
-                                                                  width: 74,
-                                                                  height: 63,
-
-                                                                  child: Stack(
-                                                                      children: <Widget>[
-                                                                        Positioned(
-                                                                            top: 0,
-                                                                            left: 17,
-                                                                            child: Container(
-                                                                                width: 40,
-                                                                                height: 40,
-                                                                                decoration: BoxDecoration(
-                                                                                  borderRadius : BorderRadius.only(
-                                                                                    topLeft: Radius.circular(50),
-                                                                                    topRight: Radius.circular(50),
-                                                                                    bottomLeft: Radius.circular(50),
-                                                                                    bottomRight: Radius.circular(50),
-                                                                                  ),
-                                                                                  color : Color.fromRGBO(244, 255, 244, 1),
-                                                                                )
-                                                                            )
-                                                                        ),Positioned(
-                                                                            top: 50,
-                                                                            left: 0,
-                                                                            child: Text('Аллюминий', textAlign: TextAlign.left, style: TextStyle(
-                                                                                color: Color.fromRGBO(255, 255, 255, 1),
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 11,
-                                                                                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                                                fontWeight: FontWeight.normal,
-                                                                                height: 1
-                                                                            ),)
-                                                                        ),
-                                                                      ]
-                                                                  )
-                                                              )
-                                                          ),
-                                                        ]
-                                                    )
-                                                )
-                                            ),Positioned(
-                                                top: 103,
-                                                left: 107,
-                                                child: Container(
-                                                    width: 81,
-                                                    height: 86,
-
-                                                    child: Stack(
-                                                        children: <Widget>[
-                                                          Positioned(
-                                                              top: 0,
-                                                              left: 0,
-                                                              child: Container(
-                                                                  width: 81,
-                                                                  height: 86,
-                                                                  decoration: BoxDecoration(
-                                                                    borderRadius : BorderRadius.only(
-                                                                      topLeft: Radius.circular(11),
-                                                                      topRight: Radius.circular(11),
-                                                                      bottomLeft: Radius.circular(11),
-                                                                      bottomRight: Radius.circular(11),
-                                                                    ),
-                                                                    color : Color.fromRGBO(59, 56, 56, 1),
-                                                                  )
-                                                              )
-                                                          ),Positioned(
-                                                              top: 9,
-                                                              left: 4,
-                                                              child: Container(
-                                                                  width: 74,
-                                                                  height: 63,
-
-                                                                  child: Stack(
-                                                                      children: <Widget>[
-                                                                        Positioned(
-                                                                            top: 0,
-                                                                            left: 17,
-                                                                            child: Container(
-                                                                                width: 40,
-                                                                                height: 40,
-                                                                                decoration: BoxDecoration(
-                                                                                  borderRadius : BorderRadius.only(
-                                                                                    topLeft: Radius.circular(50),
-                                                                                    topRight: Radius.circular(50),
-                                                                                    bottomLeft: Radius.circular(50),
-                                                                                    bottomRight: Radius.circular(50),
-                                                                                  ),
-                                                                                  color : Color.fromRGBO(244, 255, 244, 1),
-                                                                                )
-                                                                            )
-                                                                        ),Positioned(
-                                                                            top: 50,
-                                                                            left: 0,
-                                                                            child: Text('Аллюминий', textAlign: TextAlign.left, style: TextStyle(
-                                                                                color: Color.fromRGBO(255, 255, 255, 1),
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 11,
-                                                                                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                                                fontWeight: FontWeight.normal,
-                                                                                height: 1
-                                                                            ),)
-                                                                        ),
-                                                                      ]
-                                                                  )
-                                                              )
-                                                          ),
-                                                        ]
-                                                    )
-                                                )
-                                            ),Positioned(
-                                                top: 103,
-                                                left: 214,
-                                                child: Container(
-                                                    width: 81,
-                                                    height: 86,
-
-                                                    child: Stack(
-                                                        children: <Widget>[
-                                                          Positioned(
-                                                              top: 0,
-                                                              left: 0,
-                                                              child: Container(
-                                                                  width: 81,
-                                                                  height: 86,
-                                                                  decoration: BoxDecoration(
-                                                                    borderRadius : BorderRadius.only(
-                                                                      topLeft: Radius.circular(11),
-                                                                      topRight: Radius.circular(11),
-                                                                      bottomLeft: Radius.circular(11),
-                                                                      bottomRight: Radius.circular(11),
-                                                                    ),
-                                                                  )
-                                                              )
-                                                          ),Positioned(
-                                                              top: 9,
-                                                              left: 18,
-                                                              child: Container(
-                                                                  width: 46,
-                                                                  height: 63,
-
-                                                                  child: Stack(
-                                                                      children: <Widget>[
-                                                                        Positioned(
-                                                                            top: 0,
-                                                                            left: 3,
-                                                                            child: Container(
-                                                                                width: 40,
-                                                                                height: 40,
-                                                                                decoration: BoxDecoration(
-                                                                                  borderRadius : BorderRadius.only(
-                                                                                    topLeft: Radius.circular(50),
-                                                                                    topRight: Radius.circular(50),
-                                                                                    bottomLeft: Radius.circular(50),
-                                                                                    bottomRight: Radius.circular(50),
-                                                                                  ),
-                                                                                  color : Color.fromRGBO(2, 163, 255, 1),
-                                                                                )
-                                                                            )
-                                                                        ),Positioned(
-                                                                            top: 50,
-                                                                            left: 0,
-                                                                            child: Text('Фосфат', textAlign: TextAlign.left, style: TextStyle(
-                                                                                color: Color.fromRGBO(0, 0, 0, 1),
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 11,
-                                                                                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                                                fontWeight: FontWeight.normal,
-                                                                                height: 1
-                                                                            ),)
-                                                                        ),
-                                                                      ]
-                                                                  )
-                                                              )
-                                                          ),
-                                                        ]
-                                                    )
-                                                )
-                                            ),Positioned(
-                                                top: 0,
-                                                left: 214,
-                                                child: Container(
-                                                    width: 81,
-                                                    height: 86,
-
-                                                    child: Stack(
-                                                        children: <Widget>[
-                                                          Positioned(
-                                                              top: 0,
-                                                              left: 0,
-                                                              child: Container(
-                                                                  width: 81,
-                                                                  height: 86,
-                                                                  decoration: BoxDecoration(
-                                                                    borderRadius : BorderRadius.only(
-                                                                      topLeft: Radius.circular(11),
-                                                                      topRight: Radius.circular(11),
-                                                                      bottomLeft: Radius.circular(11),
-                                                                      bottomRight: Radius.circular(11),
-                                                                    ),
-                                                                  )
-                                                              )
-                                                          ),Positioned(
-                                                              top: 9,
-                                                              left: 11,
-                                                              child: Container(
-                                                                  width: 59,
-                                                                  height: 63,
-
-                                                                  child: Stack(
-                                                                      children: <Widget>[
-                                                                        Positioned(
-                                                                            top: 0,
-                                                                            left: 10,
-                                                                            child: Container(
-                                                                                width: 40,
-                                                                                height: 40,
-                                                                                decoration: BoxDecoration(
-                                                                                  borderRadius : BorderRadius.only(
-                                                                                    topLeft: Radius.circular(50),
-                                                                                    topRight: Radius.circular(50),
-                                                                                    bottomLeft: Radius.circular(50),
-                                                                                    bottomRight: Radius.circular(50),
-                                                                                  ),
-                                                                                  color : Color.fromRGBO(235, 27, 240, 1),
-                                                                                )
-                                                                            )
-                                                                        ),Positioned(
-                                                                            top: 50,
-                                                                            left: 0,
-                                                                            child: Text('Органика', textAlign: TextAlign.left, style: TextStyle(
-                                                                                color: Color.fromRGBO(0, 0, 0, 1),
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 11,
-                                                                                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                                                fontWeight: FontWeight.normal,
-                                                                                height: 1
-                                                                            ),)
-                                                                        ),
-                                                                      ]
-                                                                  )
-                                                              )
-                                                          ),
-                                                        ]
-                                                    )
-                                                )
-                                            ),Positioned(
-                                                top: 103,
-                                                left: 0,
-                                                child: Container(
-                                                    width: 81,
-                                                    height: 86,
-
-                                                    child: Stack(
-                                                        children: <Widget>[
-                                                          Positioned(
-                                                              top: 0,
-                                                              left: 0,
-                                                              child: Container(
-                                                                  width: 81,
-                                                                  height: 86,
-                                                                  decoration: BoxDecoration(
-                                                                    borderRadius : BorderRadius.only(
-                                                                      topLeft: Radius.circular(11),
-                                                                      topRight: Radius.circular(11),
-                                                                      bottomLeft: Radius.circular(11),
-                                                                      bottomRight: Radius.circular(11),
-                                                                    ),
-                                                                  )
-                                                              )
-                                                          ),Positioned(
-                                                              top: 9,
-                                                              left: 11,
-                                                              child: Container(
-                                                                  width: 59,
-                                                                  height: 63,
-
-                                                                  child: Stack(
-                                                                      children: <Widget>[
-                                                                        Positioned(
-                                                                            top: 0,
-                                                                            left: 10,
-                                                                            child: Container(
-                                                                                width: 40,
-                                                                                height: 40,
-                                                                                decoration: BoxDecoration(
-                                                                                  borderRadius : BorderRadius.only(
-                                                                                    topLeft: Radius.circular(50),
-                                                                                    topRight: Radius.circular(50),
-                                                                                    bottomLeft: Radius.circular(50),
-                                                                                    bottomRight: Radius.circular(50),
-                                                                                  ),
-                                                                                  color : Color.fromRGBO(22, 224, 30, 1),
-                                                                                )
-                                                                            )
-                                                                        ),Positioned(
-                                                                            top: 50,
-                                                                            left: 0,
-                                                                            child: Text('Органика', textAlign: TextAlign.left, style: TextStyle(
-                                                                                color: Color.fromRGBO(0, 0, 0, 1),
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 11,
-                                                                                letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                                                fontWeight: FontWeight.normal,
-                                                                                height: 1
-                                                                            ),)
-                                                                        ),
-                                                                      ]
-                                                                  )
-                                                              )
-                                                          ),
-                                                        ]
-                                                    )
-                                                )
-                                            ),
-                                          ]
-                                      )
-                                  )
-                              ),Positioned(
-                                  top: 206,
-                                  left: 188,
-                                  child: Container(
-                                      width: 124,
-                                      height: 28,
-
-                                      child: Stack(
-                                          children: <Widget>[
-                                            Positioned(
-                                                top: 0,
-                                                left: 0,
-                                                child: Container(
-                                                    width: 124,
-                                                    height: 28,
-                                                    decoration: BoxDecoration(
-                                                      borderRadius : BorderRadius.only(
-                                                        topLeft: Radius.circular(6),
-                                                        topRight: Radius.circular(6),
-                                                        bottomLeft: Radius.circular(6),
-                                                        bottomRight: Radius.circular(6),
-                                                      ),
-                                                      color : Color.fromRGBO(70, 108, 241, 1),
-                                                    )
-                                                )
-                                            ),Positioned(
-                                                top: 8,
-                                                left: 41,
-                                                child: Text('Искать', textAlign: TextAlign.left, style: TextStyle(
-                                                    color: Color.fromRGBO(255, 255, 255, 1),
-                                                    fontFamily: 'Montserrat',
-                                                    fontSize: 11,
-                                                    letterSpacing: 0 /*percentages not used in flutter. defaulting to zero*/,
-                                                    fontWeight: FontWeight.normal,
-                                                    height: 1
-                                                ),)
-                                            ),
-                                          ]
-                                      )
-                                  )
-                              ),
-                            ]
-                        )
-                    )
+    return Scaffold(
+      body: Center(
+        child: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.all(40.0),
+          children: [
+            const SizedBox(
+              height: 20,
+            ),
+            const Center(
+              child: Text("Авторизация", style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold)),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              width: 300,
+              child: Form(
+                key: formGlobalKey,
+                child: Column(
+                  children: [
+                    TextFormField(
+                      key: const Key("email"),
+                      onChanged: (value) {
+                        model.email = value;
+                      },
+                      decoration: const InputDecoration(labelText: "Email"),
+                      validator: (email) {
+                        if (isEmailValid(email!)) {
+                          return null;
+                        } else {
+                          return 'Введите действительный адрес электронной почты';
+                        }
+                      },
+                      keyboardType: TextInputType.emailAddress,
+                    ),
+                    TextFormField(
+                      key: const Key("password"),
+                      onChanged: (value) {
+                        model.password = value;
+                      },
+                      validator: (password) {
+                        if (password == null || password.isEmpty) {
+                          return 'Обязательное поле';
+                        }
+                        // if (password.length < 8) {
+                        //   return 'Пароль не менее 8 символов';
+                        // }
+                        return null;
+                      },
+                      obscureText: _isObscure,
+                      decoration: InputDecoration(
+                          labelText: 'Password',
+                          suffixIcon: IconButton(
+                              icon: Icon(_isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off),
+                              onPressed: () {
+                                setState(() {
+                                  _isObscure = !_isObscure;
+                                });
+                              })),
+                    ),
+                    const SizedBox(height: 8),
+                    //   Text(context.watch<MainModel>().authError, style: TextStyle(color: Colors.red),),
+                  //  const SizedBox(height: 8),
+                  ],
                 ),
-              ]
-          )
+              ),
+            ),
+            Consumer<MapNotifier>(
+              builder: (_, notifier, __) {
+                if (notifier.state == NotifierState.loading) {
+                  return Column(
+                    children: const [
+                      SizedBox(height: 8),
+                      SpinKitFadingCube(
+                          color: kAccentColor,
+                          size: 30.0
+                      ),
+                      SizedBox(height: 8),
+                    ],
+                  );
+                } else if (notifier.state != NotifierState.loaded) {
+                  if (notifier.error != null) {
+                    return Text(
+                      notifier.error.toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 14, color: Colors.red),
+                    );
+                  }
+                }
+                return Container();
+              },
+            ),
+            const SizedBox(height: 8),
+            Center(
+              child: ElevatedButton(
+                onPressed: () async {
+                  if (formGlobalKey.currentState!.validate()) {
+                    formGlobalKey.currentState!.save();
+                    setState(() {
+                      // userFuture = userRepository.getUsers();
+                      context
+                          .read<MapNotifier>()
+                          .auth(model.email, model.password, context);
+                    });
+                  }
+                },
+                child: const Text("Войти",
+                    style: TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.bold)),
+              style: ButtonStyle(
+                minimumSize: MaterialStateProperty.all(const Size(180, 44)),
+                backgroundColor: MaterialStateProperty.all(
+                  kAccentColor,
+                ),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
+              ),
+              ),
+            ),
+            const SizedBox(
+              height: 70,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,8 +1,6 @@
 import 'dart:math';
 import 'dart:typed_data';
 import 'dart:ui';
-
-import 'package:app_hackathon/provider/auth_notifer.dart';
 import 'package:app_hackathon/provider/map_notifer.dart';
 import 'package:app_hackathon/screens/widgets/control_button.dart';
 import 'package:app_hackathon/screens/widgets/map_page.dart';
@@ -216,7 +214,13 @@ class _MapScreenState extends State<MapScreen> {
               IconButton(
                 icon: Icon(Icons.add_shopping_cart),
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  if(!read.authed) {
+                    Navigator.pushNamed(context, 'auth_screen');
+                  } else {
+                    Navigator.pushNamed(context, 'profile_screen');
+                  }
+                },
               ),
               IconButton(
                 icon: Icon(Icons.search),
@@ -229,7 +233,11 @@ class _MapScreenState extends State<MapScreen> {
                 icon: Icon(Icons.account_box),
                 color: Colors.black,
                 onPressed: () {
-                  Navigator.pushNamed(context, 'auth_screen');
+                  if(!read.authed) {
+                    Navigator.pushNamed(context, 'auth_screen');
+                  } else {
+                    Navigator.pushNamed(context, 'profile_screen');
+                  }
                 },
               ),
             ],
@@ -272,7 +280,7 @@ class _MapScreenState extends State<MapScreen> {
       builder: (context) {
         return Container(
           height: 200,
-          width: double.infinity,
+       //   width: double.infinity,
           color: Colors.grey.shade200,
           alignment: Alignment.center,
           // child: ElevatedButton(
@@ -281,42 +289,45 @@ class _MapScreenState extends State<MapScreen> {
           //     primary: HexColor(p['colors'][0]),
           //   ),
           child: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(p['address']),
-                    Text("\n" + p['fractions'].toString()),
-                  ],
-                ),
-                FloatingActionButton(
-                  heroTag: 'next',
-                  onPressed: () async {
-                    late String url =
-                        'https://yandex.ru/maps?whatshere%5Bpoint%5D=' +
-                            p['x'] +
-                            '%2C' +
-                            p['y'] +
-                            '&whatshere%5Bzoom%5D=16.037464&ll=38.997331%2C45.03968899961266&z=16.037464';
-                    if (await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-
-                    //маршрут
-                  },
-                  child: Icon(Icons.map),
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(p['address']),
+                      Text("\n" + p['fractions'].toString()),
+                    ],
                   ),
-                ),
-              ],
+                  FloatingActionButton(
+                    heroTag: 'next',
+                    onPressed: () async {
+                      late String url =
+                          'https://yandex.ru/maps?whatshere%5Bpoint%5D=' +
+                              p['x'] +
+                              '%2C' +
+                              p['y'] +
+                              '&whatshere%5Bzoom%5D=16.037464&ll=38.997331%2C45.03968899961266&z=16.037464';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+
+                      //маршрут
+                    },
+                    child: Icon(Icons.map),
+                    backgroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           // onPressed: () {

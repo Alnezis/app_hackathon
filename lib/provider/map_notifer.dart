@@ -27,6 +27,8 @@ class MapNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
+  late bool authed = false;
+
   late String password = '';
 
   void setPassword(value) {
@@ -113,6 +115,7 @@ class MapNotifier extends ChangeNotifier {
         _setState(NotifierState.initial);
         throw const Failure("Неверный пароль!");
       } else {
+        authed = true;
         _setState(NotifierState.loaded);
         //Get.offAllNamed(HomeScreen.id);
         Navigator.pushAndRemoveUntil<dynamic>(

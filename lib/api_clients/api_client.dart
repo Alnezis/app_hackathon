@@ -10,7 +10,7 @@ import '../models/user.dart';
 
 class ApiClient {
   Future<User> auth(email, password) async {
-    String url = 'https://alnezis.qweri-craft.ru:1919/manager/' + email + '/' +
+    String url = 'https://alnezis.qweri-craft.ru:1920/manager/' + email + '/' +
         password;
 
     try {
@@ -28,7 +28,7 @@ class ApiClient {
   }
 
   Future<Map<String, dynamic>> placeholders() async {
-    String url = 'https://alnezis.qweri-craft.ru:1919/placeholders';
+    String url = 'https://alnezis.qweri-craft.ru:1920/placeholders';
     try {
       var response = await Dio().get(url);
       print('Response status: ${response.statusCode}');

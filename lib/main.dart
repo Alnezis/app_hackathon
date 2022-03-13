@@ -4,12 +4,9 @@ import 'package:app_hackathon/screens/auth_screen.dart';
 import 'package:app_hackathon/screens/home_screen.dart';
 import 'package:app_hackathon/screens/main_screen.dart';
 import 'package:app_hackathon/screens/loading_screen.dart';
-import 'package:app_hackathon/screens/rsp_screen.dart';
 import 'package:app_hackathon/screens/map_screen.dart';
-import 'package:app_hackathon/screens/test3_screen.dart';
-import 'package:app_hackathon/screens/test4_screen.dart';
-import 'package:app_hackathon/screens/test_screen.dart';
-import 'package:app_hackathon/screens/ulp_screen.dart';
+import 'package:app_hackathon/screens/profile_screen.dart';
+import 'package:app_hackathon/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:provider/provider.dart';
@@ -50,6 +47,9 @@ class MyApp extends StatelessWidget {
           'main_screen': (context) => MainScreen(),
           'loading_screen': (context) => LoadingScreen(),
           'map_screen': (context) => MapScreen(),
+          'profile_screen': (context) => ProfileScreen(),
+          'shop_screen': (context) => ShopScreen(),
+
         }
     )
     );
